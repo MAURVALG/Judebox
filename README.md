@@ -33,35 +33,30 @@ Usuarios: habra tres tipos de usuarios:
                                         *Usuario registrado
                                         *Usuario visitante
 
-Registro e inicio de sesión debe ser con los siguientes datos por medio de un boton iniciar sesion:
-                                                                                                      * Email
-                                                                                                      * Contraseña
-                                                                                                      * Un usuario puede cerrar sesion por medio de boton cerrar                                                              sesion.                                     
+Registro e inicio de sesión debe ser con los siguientes datos por medio de un boton iniciar sesion: Email, Contraseña
+Un usuario puede cerrar sesion por medio de boton cerrar sesion.                                     
 
 Usuario Administrador:  
-                        * un usuario administrador puede crar carpetas de generos para ingresar las canciones, los generos seran definidos por el usuario administrador
-                        * Un usuario administrador puede ingresar canciones a las carpetas por genero previamente definidas por medio del boton ingresar cancion
-                        * un usuario administrador puede eliminar canciones de las carpetas previamente definidas por medio del boton eliminar frente a cada    cancion
+                        * un usuario administrador puede crear  generos .
+                        * Un usuario administrador puede asignar canciones a un genero. 
+                        * El Usuario administrador podra subir las canciones desde su PC a la base de datos del programa por medio del boton añadir.
+                        * El Usuario administrador debera ingresar los siguientes datos de las canciones : Nombre de Cancion , Nombre de Artista y nombre de  Album
+                        * El usuario administrador podra eliminar las canciones de la base de datos del programa.
 
 
 Usuario:        * Puede crear cuenta de usuario
-                * El usuario puede crear una unica lista de reproducción la cual sera guardada si tiene cuenta registrada.
-                * El usuario puede recorrer las carpetas de genero disponibles donde vera las canciones tambien disponibles para elegir la cancion preferida
-                * El Usuario registrado podra añadir canciones a su lista de reproduccion por medio del boton añadir disponible para cada cancion.
-                * El Usuario registrado podra eliminar canciones de su lista de reproduccion por medio del boton eliminar disponible para cada cancion.
+                * El usuario podra crear una unica lista de reproducción la cual sera guardada si tiene cuenta registrada.
+                * El usuario ppdra recorrer las carpetas de genero disponibles.
+                * El Usuario podra elegir las canciones favoritas y agregarlas a su lista de reproduccion.
                 * Un usuario visitante puede hacer lista de reproduccion temporal la cual estara mientras este en la pagina.
                 * Un Usuario visitante podra añadir canciones de su lista de reproduccion por medio del boton añadir disponible para cada cancion.
                 * Un Usuario visitante podra eliminar canciones de su lista de reproduccion por medio del boton eliminar disponible para cada cancion.
-                * El usurio al reproducir la cancion puede ver los datos de la cancion que esta en reproduccion tales como:
 
-                                     * Artista
-                                     * Genero
-                                     * Album
 
 
 
 Reproducción:
-                * El usuario podra reproducir la cancion seleccionada por medio de un click al boton reproducir.
-                * El usuario podra reproducir la cancion seleccionada por medio de un click al boton pausa.
-                * El usuario podra reproducir la cancion seleccionada por medio de un click al boton repetir cancion.
-                * El usuario podra reproducir la cancion seleccionada por medio de un click al boton reproducción aleatoria.
+                * se podra reproducir la cancion seleccionada por medio de un click al boton reproducir.
+                * se podra reproducir la cancion seleccionada por medio de un click al boton pausa.
+                * se podra reproducir la cancion seleccionada por medio de un click al boton repetir cancion.
+                * se podra reproducir la cancion seleccionada por medio de un click al boton reproducción aleatoria.
