@@ -1,0 +1,21 @@
+<h1>New</h1>
+
+<%= form_for @song, html: { multipart: true } do |s| %>
+<p>
+ <%= s.label "Name" %>
+ <%= s.text_field :song_name %>
+</p>
+<p>
+<%= s.label "Artist" %>
+ <%= s.text_field :artist_name %>
+</p>
+<p>
+  <%= s.label "Album" %>
+ <%= s.text_field :album_name %>
+</p>
+<p>
+  <%= s.label "Attachment" %>
+ <%= s.file_field :attachment %>
+</p>
+ <%= s.submit "NEW",class: "btn btn-primary" %>
+<%end%>

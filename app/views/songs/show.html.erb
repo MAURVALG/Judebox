@@ -1,0 +1,25 @@
+<h1>Song <%= @song.song_name  %></h1>
+
+<p>
+	<b>Name:</b>
+	<%= @song.song_name  %>
+</p>
+
+<p>
+	<b>Artist:</b>
+	<%= @song.artist_name  %>
+</p>
+
+<p>
+	<b>Album:</b>
+	<%= @song.album_name  %>
+</p>
+
+<p>
+	<b>Attachment:</b>
+	<%= @song.attachment  %>
+</p>
+
+
+<button><%= link_to "Index", songs_path %></button>
+<button><%= link_to "Edit", edit_song_path(@song) %></button>

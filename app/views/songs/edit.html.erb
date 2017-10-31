@@ -1,0 +1,21 @@
+<h1>Edit</h1>
+
+<%= form_for @song do |s| %>
+<p>
+ <%= s.label "Name" %>
+ <%= s.text_field :song_name %>
+</p>
+<p>
+<%= s.label "Artist" %>
+ <%= s.text_field :artist_name %>
+</p>
+<p>
+  <%= s.label "Album" %>
+ <%= s.text_field :album_name %>
+</p>
+<p>
+  <%= s.label "Attachment" %>
+ <%= s.file_field :attachment %>
+</p>
+ <%= s.submit "Update" %>
+<%end%>
