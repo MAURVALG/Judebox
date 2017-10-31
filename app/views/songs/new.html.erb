@@ -17,5 +17,9 @@
   <%= s.label "Attachment" %>
  <%= s.file_field :attachment %>
 </p>
- <%= s.submit "NEW",class: "btn btn-primary" %>
+ <%= s.submit "Save"  %>
+ 
 <%end%>
+<br>
+<button><%= link_to "Back" , songs_path %></button>
+<button><%= link_to "Salir", destroy_user_session_path, method: :delete %></button>
