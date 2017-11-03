@@ -1,6 +1,6 @@
 <h1>Songs List</h1>
 
-<table border="1">
+<table border="1",  class="table">
 	<tr>
 		<th> Name </th>
 		<th> Artist </th>
@@ -18,8 +18,8 @@
 			<td><%= s.artist_name %></td>
 			<td><%= s.album_name %></td>
 			<td><audio src="<%= s.attachment_url %>" type="audio/mpeg" controls></audio></td>
-			<td><%= link_to "Edit" , edit_song_path(s) %>
-				<%= link_to "Show" , song_path(s) %>
+			<td><%= link_to "Edit" , edit_song_path(s) %> |
+				<%= link_to "Show" , song_path(s) %>|
 				<%= link_to "Delete" , song_path(s), :confirm => "¿Estas eguro?", :method => :delete%>
 			</td>
 			
