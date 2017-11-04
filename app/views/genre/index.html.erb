@@ -1,0 +1,18 @@
+<h1>Genre List</h1>
+
+<table border="1",  class="table">
+	<tr>
+		<th> Name </th>
+
+
+	</tr>
+	<% @genres.each do |g| %>
+		<tr>
+			<td> <%= g.name %> </td>
+
+		</tr>
+
+		<% end %>
+	</table>
+  <button><%= link_to "New" , new_genre_path %></button>
+  <button><%= link_to "Back" , :controller => "home", :accion => "index" %></button>

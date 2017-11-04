@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 #delete 'songs/destroy' => 'songs#destroy'
 
  resources :songs
+ resources :genre
  # root :to => 'songs#index'  # Con esta instruccion la pagina de inicio siempre cargara en la vista Index del controlador Songs
  root :to => 'home#index' # Con esta instruccion la pagina de inicio siempre cargara en la vista Index del controlador home
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

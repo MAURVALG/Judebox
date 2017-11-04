@@ -12,8 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20171103214329) do
 
-  
-
   create_table "genres", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -28,8 +26,6 @@ ActiveRecord::Schema.define(version: 20171103214329) do
     t.index ["playlist_id"], name: "index_playlist_songs_on_playlist_id"
     t.index ["song_id"], name: "index_playlist_songs_on_song_id"
   end
-
-  
 
   create_table "songs", force: :cascade do |t|
     t.string "song_name"
