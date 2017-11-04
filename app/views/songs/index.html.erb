@@ -8,9 +8,6 @@
 		<th> Song </th>
 		<th> Options </th>
 		
-		
-
-
 	</tr>
 	<% @songs.each do |s| %>
 		<tr>
@@ -22,9 +19,9 @@
 				<%= link_to "Show" , song_path(s) %>|
 				<%= link_to "Delete" , song_path(s), :confirm => "¿Estas eguro?", :method => :delete%>
 			</td>
-			
+
 		</tr>
-					
+
 		<% end %>
 	</table>
 
