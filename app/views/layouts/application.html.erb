@@ -35,12 +35,13 @@
       <li>
         <% if user_signed_in? %>
          Bienvenido <%= current_user.email %>
-        <button><%= link_to "Salir", destroy_user_session_path, method: :delete %></button>
+      <p> <%= link_to "Salir", destroy_user_session_path, method: :delete %></p>
+     
 
-        <button><%= link_to "Genre", :controller => "genres", :accion => "index", class: "btn btn-primary" %></button>
+       <p> <%= link_to "Genre", :controller => "genres", :accion => "index", class: "btn btn-primary" %></p>   
       <% else %>
   
-      <button class="Ingreso"> <%= link_to "Ingresar", new_user_session_path %></button>
+      <button class="inicio"> <%= link_to "Ingresar", new_user_session_path %></button>
      
   
          <% end %>
