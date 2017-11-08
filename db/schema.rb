@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(version: 20171107224253) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "playlist_songs", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["song_id"], name: "index_playlist_songs_on_song_id"
+    t.index ["user_id"], name: "index_playlist_songs_on_user_id"
+  end
+
   create_table "playlists", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"

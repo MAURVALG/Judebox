@@ -43,7 +43,9 @@ class SongsController < ApplicationController
  #def show
 	#@song = @genre.songs.find(params[:id])
  #end
-
+def song_params
+    params.require(:song).permit(:name_song, :artist_name, :album_name, :attachment)
+  end
 
 
 end
