@@ -1,0 +1,55 @@
+<h1>Genre <%= @genre.name %></h1>
+
+<p>
+	<b>Name:</b>
+	<%= @genre.name  %>
+</p>
+
+<h1>Songs List</h1>
+
+<table border="1",  class="table">
+	<tr>
+		<th> Name </th>
+		<th> Artist </th>
+		<th> Album </th>
+		<th> Song </th>
+		<th> Options </th>
+		
+	</tr>
+	<% @genre.songs.each do |song| %>
+		<tr>
+			<td> <%= song.song_name %> </td>
+			<td><%= song.artist_name %></td>
+			<td><%= song.album_name %></td>
+			<td><audio src="<%= song.attachment_url %>" type="audio/mpeg" controls></audio></td>
+			<td><%= link_to 'Eliminar Cancion', genre_song_path(@genre, song),
+               :method => :delete,
+               :data => { :confirm => '¿Estás seguro?' } %></td>
+   <% end %>
+</table>		
+
+<h2>Add a Song:</h2>
+<%= form_for([@genre, @genre.songs.build]) do |s| %>
+
+<p>
+ <%= s.label "Name" %>
+ <%= s.text_field :song_name %>
+</p>
+<p>
+<%= s.label "Artist" %>
+ <%= s.text_field :artist_name %>
+</p>
+<p>
+  <%= s.label "Album" %>
+ <%= s.text_field :album_name %>
+</p>
+<p>
+  <%= s.label "Attachment" %>
+ <%= s.file_field :attachment %>
+</p>
+ <%= s.submit "Save"  %>
+
+<%end%>
+
+<button><%= link_to "Edit", edit_genre_path(@genre) %></button>
+<button><%= link_to "Back", genres_path %></button>

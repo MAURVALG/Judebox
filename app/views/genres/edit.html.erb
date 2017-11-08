@@ -1,0 +1,16 @@
+<h1>New Genre</h1>
+
+<%= form_for @genre, html: { multipart: true } do |g| %>
+<% if @genre.errors.any? %>
+  <% @genre.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+<% end %>
+<p>
+ <%= g.label "Name" %>
+ <%= g.text_field :name %>
+</p>
+
+ <%= g.submit "Update"  %>
+
+<% end %>

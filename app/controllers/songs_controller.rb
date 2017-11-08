@@ -1,54 +1,49 @@
 class SongsController < ApplicationController
 
+  
   def index
-  	@songs = Song.all
+    @genre = Genre.find(genre[params])
+  	@songs = @genre.songs
   end
 
+  #def new
+   # @song = Song.new
+  #end
 
-  def edit
-  	@song = Song.find(params[:id])
+  def create
+    @genre = Genre.find(params[:genre_id])
+    @song = @genre.songs.create(song_params)
+      if  @song.save
+        redirect_to genre_path(@genre)
+      end
   end
-
-
- def update
-  	@song = Song.find(params[:id])
-  	 if @song.update (song_params)
- 	    redirect_to songs_path
-    else
-      render "edit"
-  	 end
- end
-
- def new
- @song = Song.new
- end
-
- def create
- 	@song = Song.new(song_params)
-    if	@song.save
- 	    redirect_to songs_path
-    else
-      render "new"
-    end
-
- end
-
- def show
-	@song = Song.find(params[:id])
- end
-
- def destroy
- 	@song = Song.find(params[:id])
-  if	@song.destroy
-     	redirect_to songs_path
+ 
+  def destroy
+    @genre = Genre.find(params[:genre_id])
+    @song = @genre.songs.find(params[:id])
+  if  @song.destroy
+      redirect_to genre_path(@genre)
   end
  end
 
+  #def edit
+  #	@song = Song.find(params[:id])
+  #end
 
 
-	private
+ #def update
+  	#@song = Song.find(params[:id])
+  	# if @song.update (song_params)
+ 	    #redirect_to songs_path
+    #else
+     # render "edit"
+  	 #end
+ #end
 
-	def song_params
-    params.require(:song).permit(:song_name, :artist_name, :album_name, :attachment)
- 	end
+ #def show
+	#@song = @genre.songs.find(params[:id])
+ #end
+
+
+
 end

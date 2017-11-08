@@ -1,6 +1,10 @@
 <h1>Edit</h1>
-
-<%= form_for @song do |s| %>
+<%= form_for @song, html: { multipart: true } do |s| %>
+<% if @song.errors.any? %>
+  <% @song.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+<% end %>
 <p>
  <%= s.label "Name" %>
  <%= s.text_field :song_name %>

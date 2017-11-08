@@ -1,8 +1,8 @@
 <% if user_signed_in? %>
   Bienvenido <%= current_user.email %>
-  <button><%= link_to "Salir", destroy_user_session_path, method: :delete %></button>
-  
-  <button><%= link_to "Music", :controller => "songs", :accion => "index", class: "btn btn-primary" %></button>
+ 	 <button><%= link_to "Salir", destroy_user_session_path, method: :delete %></button>
+
+	 <button><%= link_to "Genre", :controller => "genres", :accion => "index", class: "btn btn-primary" %></button>
 <% else %>
   
   <button><%= link_to "Ingresar", new_user_session_path %></button>
