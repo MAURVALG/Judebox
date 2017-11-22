@@ -1,21 +1,23 @@
 <h1>Genre List</h1>
 
-<table border="1",  class="table">
+<table border="1"  class="table">
 	<tr>
 		<th> Name </th>
 		<th> Options </th>
 
 	</tr>
 	<% @genres.each do |g| %>
-		<tr>
+		<tr id="table">
 			<td> <%= g.name %> </td>
-			<td> <%= link_to "Edit" , edit_genre_path(g) %> |
-			<%= link_to "Show" , genre_path(g) %>|
-			<%= link_to "Delete" , genre_path(g), :confirm => "¿Estas eguro?", :method => :delete%>
+			<td><button style="background-color:#6B2414"><%= link_to "Edit" , edit_genre_path(g) %></button> 
+				<button style="background-color:#6B2414;"><%= link_to "Show" , genre_path(g) %></button>
+			    <button style="background-color:#6B2414;"><%= link_to "Delete" , genre_path(g), :confirm => "¿Estas eguro?", :method => :delete%></button>
+			
 			</td>
 		</tr>
 
 		<% end %>
 	</table>
-  <button><%= link_to "New" , new_genre_path %></button>
-  <button><%= link_to "Back" , :controller => "home", :accion => "index" %></button>
+	<p><%= link_to "New" , new_genre_path %> | <%= link_to "Back" , :controller => "home", :accion => "index" %></p>
+  
+ 

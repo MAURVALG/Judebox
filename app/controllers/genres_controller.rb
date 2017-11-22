@@ -1,5 +1,9 @@
 class GenresController < ApplicationController
 
+http_basic_authenticate_with :name => "maurvalg", :password => "1234567", :except => [:index, :show]
+
+ 
+
   def index
     @genres = Genre.all
   end
